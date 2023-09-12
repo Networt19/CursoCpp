@@ -1,16 +1,31 @@
 #include<iostream>
 using namespace std;
+class Punto{
+    public:
 
 
-auto sum(int a){
-    return [a](int b){return a+b}
-}
+    int x, y;
 
+    Punto(int x, int y) : x(x), y(y) {}
 
-int main()
-{
-    auto result =sum(5);
-    int a = result(100);
-    int b = result(30);
-    cout << a << b <<end1;
+    Punto operator+(const Punto& otro){
+        return Punto(x + otro.x, y + otro.y);
+    }
+
+    Punto operator-(const Punto& otro){
+        return Punto(x - otro.x, y - otro.y);
+    }
+};
+
+int main() {
+    Punto punto1(3, 4);
+    Punto punto2(1, 2);
+
+    Punto suma = punto1 + punto2;
+    Punto resta =punto1 -punto2;
+
+    std::cout << punto1.x <<punto1.y << std::endl;
+    std::cout << punto2.x <<punto2.y << std::endl;
+    std::cout << suma.x <<suma.y << std::endl;
+    std::cout << suma.x <<suma.y << std::endl;
 }

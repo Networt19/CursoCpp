@@ -1,0 +1,25 @@
+#include<iostream>
+
+class Punto{
+    bool operator==(const Punto& p){
+        return (this->x == p.x && this->y ==p.y);
+    }
+};
+
+int main(){
+      int x, y;
+
+    Punto(int x, int y) : x(x), y(y) {}
+
+    Punto* p = new Punto();
+    p->x 1; p->y =3;
+    Punto* p2 = new Punto();
+     p2->x 1; p2->y =3;
+     if( *p == *p2){std::cout << "son iguales" << std::endl;
+     }
+   
+     {
+        /* code */
+     }
+     
+}
